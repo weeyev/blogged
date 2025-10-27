@@ -4,9 +4,10 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>[weeye] - QuSCII</title>
+        <title>[weeye] - quscii</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tufte-css/1.8.0/tufte.min.css" />
         <link rel="stylesheet" type="text/css" href="../css/default.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet" />
     </head>
     <body>
         <article>
@@ -21,7 +22,7 @@
 </div>
 
             <section>
-                <h1>QuSCII</h1>
+                <h1>quscii</h1>
                 <div class="info">
     Posted on April 20, 2025
     
@@ -167,5 +168,50 @@
                 <a href="http://jaspervdj.be/hakyll">Hakyll</a>
             </footer>
         </article>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+    <script>
+        function stripHighlighting(pre) {
+            var code = pre.querySelector('code');
+            if (code) {
+                code.innerHTML = code.textContent;
+            }
+        }
+        function detectLanguage(pre, code) {
+            var classes = [];
+            if (pre && pre.classList) {
+                classes = classes.concat(Array.from(pre.classList));
+            }
+            if (code && code.classList) {
+                classes = classes.concat(Array.from(code.classList));
+            }
+            for (var i = 0; i < classes.length; i++) {
+                var cls = classes[i];
+                if (cls && cls !== 'sourceCode') {
+                    return cls.toLowerCase();
+                }
+            }
+            return null;
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('pre').forEach(function(pre) {
+                stripHighlighting(pre);
+                var code = pre.querySelector('code');
+                var lang = detectLanguage(pre, code);
+                if (lang && code) {
+                    code.className = 'language-' + lang;
+                }
+                if (pre.classList.contains('sourceCode')) {
+                    pre.classList.remove('sourceCode');
+                }
+            });
+            if (window.Prism) {
+                if (Prism.plugins && Prism.plugins.autoloader) {
+                    Prism.plugins.autoloader.languages_path = 'https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/';
+                }
+                Prism.highlightAll();
+            }
+        });
+    </script>
     </body>
 </html>

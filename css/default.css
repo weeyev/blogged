@@ -5,7 +5,7 @@
 }
 
 body {
-    color: white;
+    color: #FAF9F6;
     background-color: black;
     font-size: 18px;
     width: 100% !important;
@@ -39,7 +39,7 @@ h1#logo {
 }
 
 h1#logo a {
-    color: white;
+    color: #FAF9F6;
     font-weight: bold;
     text-decoration: none;
 }
@@ -54,7 +54,7 @@ h1#logo a {
 }
 
 #navigation a {
-    color: white;
+    color: #F9F6EE;
     font-size: 16px;
     font-weight: bold;
     text-decoration: none;
@@ -104,10 +104,15 @@ p {
     text-align: center;
 }
 
-.post-list, ul {
+ul {
     width: 100%;
     padding-left: 25px;
     margin: 0 0 20px 0;
+}
+
+.date-meta{
+    font-size:30px;
+
 }
 
 li {

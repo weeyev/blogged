@@ -1,5 +1,5 @@
 ---
-title: QuSCII
+title: quscii
 date: 2025-04-20
 ---
 

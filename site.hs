@@ -1,5 +1,7 @@
 --------------------------------------------------------------------------------
 {-# LANGUAGE OverloadedStrings #-}
+import           Control.Applicative ((<|>), empty)
+import           Data.List (isInfixOf)
 import           Data.Monoid (mappend)
 import           Hakyll
 
@@ -52,8 +54,11 @@ main = hakyllWith config $ do
         route idRoute
         compile $ do
             posts <- recentFirst =<< loadAll "posts/*"
+            -- Load the raw markdown content directly
+            linksContent <- loadBody (fromFilePath "posts/links.md" :: Identifier)
             let indexCtx =
                     listField "posts" postCtx (return posts) `mappend`
+                    constField "bookmarksPreview" (take5Bookmarks linksContent) `mappend`
                     constField "title" "Home"                `mappend`
                     defaultContext
 
@@ -66,8 +71,51 @@ main = hakyllWith config $ do
 
 
 --------------------------------------------------------------------------------
+take5Bookmarks :: String -> String
+take5Bookmarks content = 
+    let allLines = lines content
+        -- Skip frontmatter and find first <li>
+        contentLines = dropWhile (not . isListItem) $ dropFrontmatter allLines
+        -- Take 5 bookmark items
+        bookmarks = takeNItems contentLines 5
+    in unlines bookmarks
+  where
+    dropFrontmatter [] = []
+    dropFrontmatter (l:ls)
+        | l == "---" = dropFrontmatter' ls
+        | otherwise = l:ls
+    
+    dropFrontmatter' [] = []
+    dropFrontmatter' (l:ls)
+        | l == "---" = ls
+        | otherwise = dropFrontmatter' ls
+    
+    isListItem l = "<li class=\"post-item\"" `isInfixOf` l
+    
+    takeNItems _ 0 = []
+    takeNItems [] _ = []
+    takeNItems (l:ls) n
+        | "<li class=\"post-item\"" `isInfixOf` l =
+            let (item, rest) = takeOneItem (l:ls)
+            in item ++ takeNItems rest (n - 1)
+        | otherwise = takeNItems ls n
+    
+    takeOneItem [] = ([], [])
+    takeOneItem (l:ls)
+        | "</li>" `isInfixOf` l = ([l], ls)
+        | otherwise = 
+            let (rest, remaining) = takeOneItem ls
+            in (l:rest, remaining)
+
+--------------------------------------------------------------------------------
 postCtx :: Context String
-postCtx =
-    dateField "date" "%B %e, %Y" `mappend`
-    defaultContext
+postCtx = mconcat
+    [ dateField "date" "%B %-d, %Y"
+    , field "categoryLabel" $ \item -> do
+        metadata <- getMetadata (itemIdentifier item)
+        case lookupString "category" metadata <|> lookupString "type" metadata of
+            Just cat -> return cat
+            Nothing -> empty
+    , defaultContext
+    ]
 
