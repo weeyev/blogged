@@ -166,5 +166,96 @@ collection of interesting links on the web to visit later
 </div>
 <a class="post-link" href="https://docs.google.com/document/d/1ZV73D2vgaj2yu_tjN3TVOP6QVLWVPXJB2rrqSZQxYtI/mobilebasic" target="_blank" rel="noopener">research interviews guide</a>
 </li>
+<li class="post-item" style="list-style: none; margin-bottom: 15px;">
+<div class="post-meta" style="margin-bottom: -5px;">
+<span class="real-meta" style="color: #888; font-size: 14px;">November 10, 2025 · transformer-circuits.pub</span>
+</div>
+<a class="post-link" href="https://transformer-circuits.pub/2021/framework/index.html" target="_blank" rel="noopener">Transformer Circuits — framework (2021)</a>
+</li>
+
+<li class="post-item" style="list-style: none; margin-bottom: 15px;">
+<div class="post-meta" style="margin-bottom: -5px;">
+<span class="real-meta" style="color: #888; font-size: 14px;">November 10, 2025 · arb8020.github.io</span>
+</div>
+<a class="post-link" href="https://arb8020.github.io/posts/outlier-features/" target="_blank" rel="noopener">Outlier Features — arb8020</a>
+</li>
+
+<li class="post-item" style="list-style: none; margin-bottom: 15px;">
+<div class="post-meta" style="margin-bottom: -5px;">
+<span class="real-meta" style="color: #888; font-size: 14px;">November 10, 2025 · patricknicolas.substack.com</span>
+</div>
+<a class="post-link" href="https://patricknicolas.substack.com/" target="_blank" rel="noopener">Patrick Nicolas (Substack)</a>
+</li>
+
+<li class="post-item" style="list-style: none; margin-bottom: 15px;">
+<div class="post-meta" style="margin-bottom: -5px;">
+<span class="real-meta" style="color: #888; font-size: 14px;">November 10, 2025 · snimu.github.io</span>
+</div>
+<a class="post-link" href="https://snimu.github.io/2025/10/10/modded-nanogpt-x0.html" target="_blank" rel="noopener">Modded NanoGPT X0 — snimu</a>
+</li>
+
+<li class="post-item" style="list-style: none; margin-bottom: 15px;">
+<div class="post-meta" style="margin-bottom: -5px;">
+<span class="real-meta" style="color: #888; font-size: 14px;">November 10, 2025 · gwern.net</span>
+</div>
+<a class="post-link" href="https://gwern.net/speedrunning" target="_blank" rel="noopener">Speedrunning — Gwern</a>
+</li>
+
+<li class="post-item" style="list-style: none; margin-bottom: 15px;">
+<div class="post-meta" style="margin-bottom: -5px;">
+<span class="real-meta" style="color: #888; font-size: 14px;">November 10, 2025 · arXiv</span>
+</div>
+<a class="post-link" href="https://www.arxiv.org/abs/2510.15511" target="_blank" rel="noopener">arXiv:2510.15511</a>
+</li>
+
+<li class="post-item" style="list-style: none; margin-bottom: 15px;">
+<div class="post-meta" style="margin-bottom: -5px;">
+<span class="real-meta" style="color: #888; font-size: 14px;">November 10, 2025 · towardsdatascience.com</span>
+</div>
+<a class="post-link" href="https://towardsdatascience.com/why-should-we-bother-with-quantum-computing-in-ml/" target="_blank" rel="noopener">Why bother with quantum computing in ML?</a>
+</li>
+
+<li class="post-item" style="list-style: none; margin-bottom: 15px;">
+<div class="post-meta" style="margin-bottom: -5px;">
+<span class="real-meta" style="color: #888; font-size: 14px;">November 10, 2025 · keepsimple.io</span>
+</div>
+<a class="post-link" href="https://keepsimple.io/articles/what-is-ux-core" target="_blank" rel="noopener">What is UX Core — KeepSimple</a>
+</li>
+
+<li class="post-item" style="list-style: none; margin-bottom: 15px;">
+<div class="post-meta" style="margin-bottom: -5px;">
+<span class="real-meta" style="color: #888; font-size: 14px;">November 10, 2025 · hyperboleandahalf.blogspot.com</span>
+</div>
+<a class="post-link" href="https://hyperboleandahalf.blogspot.com/2020/09/richard.html?m=1" target="_blank" rel="noopener">Richard — Hyperbole and a Half</a>
+</li>
+
+<li class="post-item" style="list-style: none; margin-bottom: 15px;">
+<div class="post-meta" style="margin-bottom: -5px;">
+<span class="real-meta" style="color: #888; font-size: 14px;">November 10, 2025 · chaitjo.com</span>
+</div>
+<a class="post-link" href="https://www.chaitjo.com/post/transformers-are-gnns/" target="_blank" rel="noopener">Transformers are GNNs — Chaitjo</a>
+</li>
+
+<li class="post-item" style="list-style: none; margin-bottom: 15px;">
+<div class="post-meta" style="margin-bottom: -5px;">
+<span class="real-meta" style="color: #888; font-size: 14px;">November 10, 2025 · anselan.com</span>
+</div>
+<a class="post-link" href="http://anselan.com/tutorial.html" target="_blank" rel="noopener">Anselan — Tutorial</a>
+</li>
+
+<li class="post-item" style="list-style: none; margin-bottom: 15px;">
+<div class="post-meta" style="margin-bottom: -5px;">
+<span class="real-meta" style="color: #888; font-size: 14px;">November 10, 2025 · colah.github.io</span>
+</div>
+<a class="post-link" href="https://colah.github.io/posts/2014-03-NN-Manifolds-Topology/" target="_blank" rel="noopener">Neural Network Manifolds & Topology — Colah</a>
+</li>
+
+<li class="post-item" style="list-style: none; margin-bottom: 15px;">
+<div class="post-meta" style="margin-bottom: -5px;">
+<span class="real-meta" style="color: #888; font-size: 14px;">November 10, 2025 · learnyouahaskell.github.io</span>
+</div>
+<a class="post-link" href="https://learnyouahaskell.github.io/" target="_blank" rel="noopener">Learn You a Haskell</a>
+</li>
+
 </ul>
 
